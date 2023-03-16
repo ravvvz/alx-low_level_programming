@@ -1,5 +1,4 @@
-## C HELLO WORLD
+## HELLO WORLD
 
-This directory holds the project that I have done on C at the ALX programme. In this you can find various lists of sub-directorys for different tasks that I did, as follows:
+This folder contains the files to answer the tasks given to me at the ALX programme. The files are:
 
-* 
