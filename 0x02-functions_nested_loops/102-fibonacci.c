@@ -10,14 +10,18 @@ int main(void)
 	unsigned long int a, b, c, d;
 
 	a = 1, b = 2;
-	for (d = 0; d < 49; d++)
+	for (d = 0; d <= 49; d++)
 	{
-		printf("%ld\n", a);
+		printf("%ld", a);
+
+		if (!(d == 49))
+			printf(", ");
 
 		c = a + b;
 		a = b;
 		b = c;
 	}
+	putchar('\n');
 
 	return (0);
 }
