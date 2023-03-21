@@ -2,6 +2,7 @@
 
 /**
  * _islower - checks if num is lower
+ * @c: int variable prameter for _islower function
  *
  * Return: 1 if c is lowercase and 0 if otherwise
  */
