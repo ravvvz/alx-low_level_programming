@@ -13,7 +13,7 @@ void print_triangle(int size)
 
 	x = size;
 
-	if (size == 0)
+	if (size <= 0)
 		_putchar('\n');
 	for (a = 1; a <= size; a++)
 	{
