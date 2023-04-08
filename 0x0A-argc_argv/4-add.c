@@ -34,9 +34,7 @@ int main(int argc, char **argv)
 				sum += num;
 		}
 	}
-
 	printf("%d\n", sum);
-
 	return (0);
 }
 
@@ -70,7 +68,6 @@ int _atoi(char *s, int *status)
 		}
 		i++;
 	}
-
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -83,11 +80,9 @@ int _atoi(char *s, int *status)
 		num = (num * 10) + (s[i] - '0');
 		i++;
 	}
-
 	if (s[0] == '-')
 	{
 		num *= -1;
 	}
-
 	return (num);
 }
