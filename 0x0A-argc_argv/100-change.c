@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			printf("%d\n", cents);
 			return (0);
 		}
-		
+
 		for (i = 0; i < 5 && value > 0; i++)
 		{
 			while (value >= coins[i])
