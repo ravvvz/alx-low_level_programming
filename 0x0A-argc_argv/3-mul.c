@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int _atoi(char *s, int *status);
 /**
@@ -39,11 +38,10 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-
 /**
- * _atoi - converts a string to integer
+ * _atoi - converts a string to intege
  * @s: the string to convert
- *
+ * 
  * Return: integer conversion of string
  */
 
@@ -70,7 +68,7 @@ int _atoi(char *s, int *status)
 		num = (num * 10) + (s[i] - '0');
 		i++;
 	}
-	
+
 	if (s[0] == '-')
 		num *= -1;
 
