@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 		else
 			mul = num1 * num2;
 	}
-	printf ("%d\n", mul);
+	printf("%d\n", mul);
 
 	return (0);
 }
@@ -41,7 +41,8 @@ int main(int argc, char **argv)
 /**
  * _atoi - converts a string to intege
  * @s: the string to convert
- * 
+ * @status: checks if value is negative
+ *
  * Return: integer conversion of string
  */
 
@@ -54,6 +55,11 @@ int _atoi(char *s, int *status)
 	{
 		if (s[i] < '0' || s[i] > '9')
 		{
+			if (i == 0 && s[i] == '-')
+			{
+				i++;
+				continue;
+			}
 			*status = -1;
 			return (0);
 		}
