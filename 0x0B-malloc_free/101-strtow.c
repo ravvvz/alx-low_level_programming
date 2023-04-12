@@ -43,11 +43,11 @@ char **strtow(char *str)
 				return (NULL);
 
 			_strncpy(word[u], &str[i], start - i);
-			word[u][start - i] = '\0';
+			word[u][(start - i) + 1] = '\0';
 			u++;
 		}
 	}
-	word[u] = '\0';
+	word[u] = NULL;
 	return (word);
 }
 
@@ -68,9 +68,6 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-	for (; i < n; i++)
-		dest[i] = '\n';
-
 	return (dest);
 }
 
