@@ -24,6 +24,8 @@ char **strtow(char *str)
 			|| (i == 0 && !_isspace(str[i])))
 			len++;
 	}
+	if (len == 0)
+		return (NULL);
 
 	word = malloc(sizeof(char *) * (len + 1));
 
