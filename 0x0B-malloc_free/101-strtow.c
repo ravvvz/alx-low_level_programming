@@ -15,7 +15,7 @@ char **strtow(char *str)
 	int i, len, start, u;
 
 	len = 0;
-	if (!str)
+	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -83,4 +83,20 @@ int _isspace(int c)
 	if (c == 32)
 		return (1);
 	return (0);
+}
+
+/**
+ * _strlen - checks the length of the string
+ * @s: the string
+ *
+ * Return: length of the string
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
