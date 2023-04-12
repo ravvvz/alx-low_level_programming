@@ -47,7 +47,7 @@ char **strtow(char *str)
 			u++;
 		}
 	}
-	word[u] = NULL;
+	word[u] = '\0';
 	return (word);
 }
 
