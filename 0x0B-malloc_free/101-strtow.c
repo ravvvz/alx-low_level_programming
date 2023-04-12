@@ -35,8 +35,8 @@ char **strtow(char *str)
 				|| (i == 0 && !_isspace(str[i])))
 		{
 			start = i;
-			while (!_isspace(str[start++]))
-				;
+			while (!_isspace(str[start]))
+				start++;
 
 			word[u] = malloc(sizeof(char) * ((start - i) + 1));
 			if (word[u] == NULL)
