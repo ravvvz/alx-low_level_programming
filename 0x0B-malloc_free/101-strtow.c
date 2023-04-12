@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _strlen(char *s);
 int _isspace(int c);
 char *_strncpy(char *dest, char *src, int n);
 /**
@@ -15,7 +16,7 @@ char **strtow(char *str)
 	int i, len, start, u;
 
 	len = 0;
-	if (str == NULL || strlen(str) == 0)
+	if (str == NULL || _strlen(str) == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
