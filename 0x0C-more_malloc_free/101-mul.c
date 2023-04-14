@@ -84,7 +84,7 @@ void multiply(char *num1, char *num2)
 	}
 
 	result_str[j] = '\0';
-	
+
 	for (i = 0; result_str[i] != '\0'; i++)
 		_putchar(result_str[i]);
 	_putchar('\n');
