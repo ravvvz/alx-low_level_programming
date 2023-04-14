@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	_strncopy(concat, s1, i);
 	_strncopy(&concat[i], s2, n);
-	concat[i + n + 1] = '\0';
+	concat[i + n] = '\0';
 
 	return (concat);
 }
