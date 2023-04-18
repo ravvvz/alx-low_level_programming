@@ -12,10 +12,28 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *dog;
+	if (d == NULL)
+		return;
 
-	dog = d;
-	dog->name = name;
-	dog->age = age;
-	dog->owner = owner;
+	d->name = NULL;
+	d->owner = NULL;
+
+	if (d->name == NULL)
+	{
+		d->name = malloc(sizeof(name));
+		if (d->name == NULL)
+			return;
+		strcpy(d->name, name);
+
+	}
+
+	if (d->owner == NULL)
+	{
+		d->owner = malloc(sizeof(owner));
+		if (d->owner == NULL)
+			return;
+		strcpy(d->owner, owner);
+	}
+
+	d->age = age;
 }
