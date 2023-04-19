@@ -11,15 +11,15 @@
 int main(int argc, char **argv)
 {
 	int (*calc)(int, int);
-	int s, k;
+	int s, k, result;
 
-	s = atoi(argv[1]);
-	k = atoi(argv[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	s = atoi(argv[1]);
+	k = atoi(argv[3]);
 
 	calc = get_op_func(argv[2]);
 	if (calc == NULL)
@@ -35,7 +35,8 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	printf("%d\n", calc(s, k));
+	result = calc(s, k);
+	printf("%d\n", result);
 
 	return (0);
 }
