@@ -10,7 +10,8 @@
 void print_all(const char * const format, ...)
 {
 	int i, k;
-	va_list ap, bp;
+	char *str;
+	va_list ap;
 
 	i = 0;
 	va_start(ap, format);
@@ -32,11 +33,13 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				k = 1;
-				va_copy(bp, ap);
-				if (va_arg(bp, char *) != NULL)
-					printf("%s", va_arg(ap, char *));
-				else
+				str = va_arg(ap, char *);
+				if (str == NULL)
+				{
 					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
 				break;
 			default:
 				k = 0;
