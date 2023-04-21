@@ -9,14 +9,14 @@
 
 void print_all(const char * const format, ...)
 {
-	int i, k;
+	int i = 0, k;
 	char *str;
 	va_list ap;
 
-	i = 0;
 	va_start(ap, format);
 	while (format && format[i] != '\0')
 	{
+		k = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -40,9 +40,6 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				printf("%s", str);
-				break;
-			default:
-				k = 0;
 				break;
 		}
 		if (format[i + 1] != '\0' && k == 1)
