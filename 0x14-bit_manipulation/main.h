@@ -8,5 +8,7 @@
 #define TRUE 1
 #define FALSE 0
 unsigned int binary_to_uint(const char *b);
+void print_binary(unsigned long int n);
+int _putchar(char c);
 
 #endif /* MAIN_H */
