@@ -12,8 +12,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char buffer[1024];
 	int fd;
-	ssize_t fd_check = 0;
+	size_t fd_check = 0, error = -1;
 
+	if (letters < fd_check)
+		return (0);
 	if (filename == NULL)
 		return (0);
 
@@ -22,11 +24,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	fd_check = read(fd, buffer, letters);
-	if (fd_check == -1)
+	if (fd_check == error)
 		return (0);
 
 	fd_check = write(STDOUT_FILENO, buffer, fd_check);
-	if (fd_check == -1)
+	if (fd_check == error)
 		return (0);
 
 	close(fd);
